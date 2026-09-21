@@ -1,0 +1,158 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Task Management System
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+
+
+    <h1>Task Management System</h1>
+    <p> Welcome, {{ request.user.username }}👋</p>
+
+    <a href="{% url 'add_task' %}" class="add-button">
+        + Add Task
+    </a>
+
+    <!-- Category Filter -->
+
+    <div class="categories">
+
+        <a href="{% url 'home' %}">
+            All
+        </a>
+
+        {% for category in categories %}
+
+        <a href="{% url 'category_tasks' category.id %}">
+            {{ category.name }}
+        </a>
+
+        {% endfor %}
+
+    </div>
+
+
+    <!-- Search Tasks -->
+    <form method="GET" class="search-form">
+
+        <input
+                type="text"
+                name="q"
+                value="{{ query }}"
+                placeholder="Search tasks..."
+        >
+
+        <button type="submit" class="button toggle">
+            Search
+        </button>
+
+    </form>
+
+    <hr>
+
+    <!-- Tasks -->
+
+    {% for task in tasks %}
+
+    <div class="task">
+
+        <h2>{{ task.title }}</h2>
+
+        <p>
+            {{ task.description }}
+        </p>
+
+        {% if task.category %}
+        <p>
+            <strong>Category:</strong>
+            {{ task.category.name }}
+        </p>
+        {% else %}
+        <p>
+            <strong>Category:</strong>
+            No category
+        </p>
+        {% endif %}
+
+        <p>
+            Created:
+            {{ task.created_at|date:"d M Y, H:i" }}
+        </p>
+
+        {% if task.completed %}
+
+        <p class="completed">
+            ✓ Completed
+        </p>
+
+        {% else %}
+
+        <p class="pending">
+            ⏳ Pending
+        </p>
+
+        {% endif %}
+
+
+        <!-- Complete / Pending -->
+
+        <form method="POST"
+              action="{% url 'toggle_task' task.id %}">
+
+            {% csrf_token %}
+
+            <button type="submit" class="button toggle">
+
+                {% if task.completed %}
+                Mark Pending
+                {% else %}
+                Mark Complete
+                {% endif %}
+
+            </button>
+
+        </form>
+
+
+        <!-- Edit -->
+
+        <a href="{% url 'edit_task' task.id %}"
+           class="button edit">
+            Edit
+        </a>
+
+
+        <!-- Delete -->
+
+        <form method="POST"
+              action="{% url 'delete_task' task.id %}">
+
+            {% csrf_token %}
+
+            <button type="submit"
+                    class="button delete"
+                    onclick="return confirm('Are you sure you want to delete this task?');">
+
+                Delete
+
+            </button>
+
+        </form>
+
+    </div>
+
+    {% empty %}
+
+    <div class="empty">
+        <h2>No Tasks Found</h2>
+        <p>Start by adding your first task.</p>
+    </div>
+
+    {% endfor %}
+
+</div>
+
+{% endblock %}

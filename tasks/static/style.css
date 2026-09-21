@@ -1,0 +1,225 @@
+/* =========================
+   General Page
+========================= */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    margin: 0;
+    padding: 40px;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+}
+
+
+/* =========================
+   Headings
+========================= */
+
+h1 {
+    text-align:Center;
+    margin-bottom:30px;
+}
+
+.p {
+  text-align:right;
+  margin-bottom:16px
+}
+
+/* =========================
+   Add Task Button
+========================= */
+
+.add-button {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 12px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.add-button:hover {
+    background-color: #0056b3;
+}
+
+
+/* =========================
+   Category Buttons
+========================= */
+
+/* =========================
+   Category Buttons
+========================= */
+
+.categories {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 20px 0 30px 0;
+    flex-wrap: wrap;
+}
+
+.categories a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: white;
+    color: #333;
+    text-decoration: none;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+}
+
+.categories a:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+
+/* =========================
+   Task Card
+========================= */
+
+.task {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.task h2 {
+    margin-top: 0;
+}
+
+
+/* =========================
+   Task Status
+========================= */
+
+.completed {
+    color: green;
+    font-weight: bold;
+}
+
+.pending {
+    color: orange;
+    font-weight: bold;
+}
+
+
+/* =========================
+   Common Buttons
+========================= */
+
+.button {
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 5px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+
+/* =========================
+   Edit Button
+========================= */
+
+.edit {
+    background-color: #ffc107;
+    color: black;
+}
+
+.edit:hover {
+    background-color: #e0a800;
+}
+
+
+/* =========================
+   Delete Button
+========================= */
+
+.delete {
+    background-color: #dc3545;
+    color: white;
+}
+
+.delete:hover {
+    background-color: #b02a37;
+}
+
+
+/* =========================
+   Complete / Pending Button
+========================= */
+
+.toggle {
+    background-color: #28a745;
+    color: white;
+}
+
+.toggle:hover {
+    background-color: #218838;
+}
+
+
+/* =========================
+   Forms - Add & Edit
+========================= */
+
+form {
+    margin-top: 15px;
+}
+
+form p {
+    margin-bottom: 15px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+form input,
+form textarea,
+form select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 15px;
+}
+
+form textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+
+/* =========================
+   Form Submit Button
+========================= */
+
+form button[type="submit"] {
+    margin-top: 10px;
+}
+
+
+/* =========================
+   Empty Tasks
+========================= */
+
+.empty {
+    text-align: center;
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+}
