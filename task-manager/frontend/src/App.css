@@ -1,0 +1,470 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f5f7fb;
+  color: #1f2937;
+}
+
+
+/* =========================
+   LOGIN
+========================= */
+
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f5f7fb;
+}
+
+.login-card {
+  width: 400px;
+  padding: 40px;
+  background: white;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+}
+
+.login-card h1 {
+  margin: 0;
+  text-align: center;
+  font-size: 28px;
+}
+
+.login-subtitle {
+  text-align: center;
+  color: #6b7280;
+  margin-bottom: 30px;
+}
+
+.login-btn {
+  margin-top: 15px;
+}
+
+/* =========================
+   COMMON FORM
+========================= */
+
+label {
+  display: block;
+  margin-top: 18px;
+  margin-bottom: 7px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 11px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 7px;
+  font-size: 14px;
+  font-family: inherit;
+  outline: none;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #2563eb;
+}
+
+textarea {
+  resize: vertical;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.primary-button {
+  border: none;
+  background: #2563eb;
+  color: white;
+  padding: 11px 18px;
+  border-radius: 7px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.primary-button:hover {
+  background: #1d4ed8;
+}
+
+.secondary-button,
+.back-button {
+  border: 1px solid #d1d5db;
+  background: white;
+  color: #374151;
+  padding: 10px 16px;
+  border-radius: 7px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.secondary-button:hover,
+.back-button:hover {
+  background: #f3f4f6;
+}
+
+
+/* =========================
+   APP LAYOUT
+========================= */
+
+.app-container {
+  min-height: 100vh;
+}
+
+.top-header {
+  height: 68px;
+  padding: 0 60px;
+  background: white;
+  border-bottom: 1px solid #e5e7eb;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 21px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.user-info {
+  font-size: 14px;
+  color: #4b5563;
+}
+
+.content {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 45px 24px;
+}
+
+
+
+/* =========================
+   WELCOME
+========================= */
+
+.welcome-section {
+  margin-bottom: 28px;
+}
+
+.welcome-section h1 {
+  margin: 0 0 8px;
+  font-size: 30px;
+}
+
+.welcome-section p {
+  margin: 0;
+  color: #6b7280;
+}
+
+
+/* =========================
+   STAT CARDS
+========================= */
+
+.stats-container {
+  display: flex;
+  gap: 18px;
+  margin-bottom: 40px;
+}
+
+.stat-card {
+  width: 165px;
+  padding: 18px 20px;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 9px;
+}
+
+.stat-card span {
+  display: block;
+  color: #6b7280;
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+.stat-card strong {
+  font-size: 25px;
+  color: #111827;
+}
+
+
+/* =========================
+   TASK SECTION
+========================= */
+
+.tasks-section {
+  margin-top: 10px;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.section-header h2 {
+  margin: 0 0 5px;
+  font-size: 22px;
+}
+
+.section-header p {
+  margin: 0;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+
+/* =========================
+   TASK CARD
+========================= */
+
+.task-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.task-card {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 9px;
+  padding: 20px 22px;
+}
+
+.task-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.task-main h3 {
+  margin: 0 0 8px;
+  font-size: 17px;
+}
+
+.task-main p {
+  margin: 0;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.status {
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.status.completed {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.status.pending {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.task-footer {
+  display: flex;
+  gap: 25px;
+  margin-top: 18px;
+  padding-top: 13px;
+  border-top: 1px solid #f0f0f0;
+  color: #6b7280;
+  font-size: 12px;
+}
+
+
+/* =========================
+   ADD TASK
+========================= */
+
+.page-heading {
+  margin-bottom: 25px;
+}
+
+.page-heading h1 {
+  margin: 0 0 8px;
+  font-size: 28px;
+}
+
+.page-heading p {
+  margin: 0;
+  color: #6b7280;
+}
+
+.form-card {
+  width: 650px;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 30px;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 25px;
+}
+
+
+/* =========================
+   EMPTY STATE
+========================= */
+
+.empty-state {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 9px;
+  padding: 50px;
+  text-align: center;
+}
+
+.empty-state h3 {
+  margin: 0 0 8px;
+}
+
+.empty-state p {
+  color: #6b7280;
+  margin-bottom: 20px;
+}
+
+
+/* =========================
+   ERROR
+========================= */
+
+.error-message {
+  margin-top: 15px;
+  color: #dc2626;
+  text-align: center;
+  font-size: 14px;
+}
+
+.task-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+  padding-top: 12px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.task-details {
+  display: flex;
+  gap: 25px;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.task-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.edit-button,
+.delete-button {
+  padding: 7px 14px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.edit-button {
+  background: #e8f0fe;
+  color: #2563eb;
+}
+
+.delete-button {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.edit-button:hover,
+.delete-button:hover {
+  opacity: 0.8;
+}
+
+.status-button {
+  padding: 7px 14px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
+  background: #dcfce7;
+  color: #16a34a;
+}
+
+.status-button:hover {
+  opacity: 0.8;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.logout-button {
+  padding: 8px 16px;
+  border: 1px solid #dc2626;
+  border-radius: 6px;
+  background: white;
+  color: #dc2626;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.logout-button:hover {
+  background: #dc2626;
+  color: white;
+}
+
+.register-option {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.register-option button {
+  margin-left: 6px;
+  border: none;
+  background: none;
+  color: #2563eb;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.register-option button:hover {
+  text-decoration: underline;
+}
